@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bracelet Section</title>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <img src="images/logo.png" alt="Logo">
+            <span class="brand-name">Violet Quartz Co. </span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+           
+            <li class="dropdown">
+                <a href="collection.html" class="dropbtn, active">Collections </a>
+
+                    <ul class="dropdown-content">
+                        <li>
+                            <a href="ring.html">Rings</a>
+                        </li>
+                        <li>
+                            <a href="necklace.html">Necklaces</a>
+                        </li>
+                        <li>
+                            <a href="earring.html">Earrings</a>
+                        </li>
+                        <li>
+                            <a href="bracelet.html">Bracelets</a>
+                        </li>
+                        <li>
+                            <a href="vault.html">Vault Special</a>
+                        </li>
+                    </ul>
+            </li>
+
+            <li>
+                <a href="about.html">About Us</a>
+            </li>
+            <li>
+                <a href="contact.html">Contacts</a>
+            </li>
+        </ul>
+
+    </div>
+    </nav>
+
+        <section class="product-section">
+    <h2 class="section-title">Our Bracelets Collection</h2>
+
+    <div class="product-container">
+
+    <!-- PRODUCT -->
+        <div class="product-card">
+            <img src="images/imgEx.png" class="clickable"
+                data-name=""
+                data-material=""
+                data-price="₱"
+                data-desc="">
+
+            <h3>Product 1</h3>
+            <p class="material">Material:  </p>
+            <p class="desc"></p>
+            <p class="price">₱</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/imgEx.png" class="clickable"
+                data-name=""
+                data-material=""
+                data-price="₱"
+                data-desc="">
+
+            <h3>Product 2</h3>
+            <p class="material">Material:  </p>
+            <p class="desc"></p>
+            <p class="price">₱</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/imgEx.png" class="clickable"
+                data-name=""
+                data-material=""
+                data-price="₱"
+                data-desc="">
+
+            <h3>Product 3</h3>
+            <p class="material">Material:  </p>
+            <p class="desc"></p>
+            <p class="price">₱</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/imgEx.png" class="clickable"
+                data-name=""
+                data-material=""
+                data-price="₱"
+                data-desc="">
+
+            <h3>Product 4</h3>
+            <p class="material">Material:  </p>
+            <p class="desc"></p>
+            <p class="price">₱</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/imgEx.png" class="clickable"
+                data-name=""
+                data-material=""
+                data-price="₱"
+                data-desc="">
+
+            <h3>Product 5</h3>
+            <p class="material">Material:  </p>
+            <p class="desc"></p>
+            <p class="price">₱</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/imgEx.png" class="clickable"
+                data-name=""
+                data-material=""
+                data-price="₱"
+                data-desc="">
+
+            <h3>Product 6</h3>
+            <p class="material">Material:  </p>
+            <p class="desc"></p>
+            <p class="price">₱</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- MODAL -->
+<div id="productModal" class="modal">
+    <div class="modal-box">
+        <span class="close">&times;</span>
+
+        <img id="modalImg">
+        <h2 id="modalName"></h2>
+        <p id="modalMaterial"></p>
+        <p id="modalDesc"></p>
+        <p id="modalPrice" class="price"></p>
+
+        <button class="buy-btn">Buy Now</button>
+    </div>
+</div>
+
+<script>
+const modal = document.getElementById("productModal");
+const modalImg = document.getElementById("modalImg");
+const modalName = document.getElementById("modalName");
+const modalMaterial = document.getElementById("modalMaterial");
+const modalDesc = document.getElementById("modalDesc");
+const modalPrice = document.getElementById("modalPrice");
+
+document.querySelectorAll(".clickable").forEach(img => {
+    img.addEventListener("click", function() {
+        modal.classList.add("show");
+
+        modalImg.src = this.src;
+        modalName.textContent = this.dataset.name;
+        modalMaterial.textContent = "Material: " + this.dataset.material;
+        modalDesc.textContent = this.dataset.desc;
+        modalPrice.textContent = this.dataset.price;
+    });
+});
+
+document.querySelector(".close").onclick = () => {
+    modal.classList.remove("show");
+};
+
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) modal.classList.remove("show");
+});
+
+document.querySelectorAll(".buy-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        alert("🛒 Purchase feature coming soon!");
+    });
+});
+</script>
+
+    <footer class="collection-foot">
+        &copy; 2026 Violet Quartz Co.
+    </footer>
+
+</body>
+</html>
+
