@@ -4,198 +4,158 @@
     <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bracelet Section</title>
+    <title>Vault Special</title>
 </head>
 <body>
     <nav class="navbar">
-    <div class="nav-container">
-        <div class="nav-logo">
-            <img src="images/logo.png" alt="Logo">
-            <span class="brand-name">Violet Quartz Co. </span>
-        </div>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="nav-home-link">
+                    <img src="images/logo.png" alt="Logo">
+                    <span class="brand-name">Violet Quartz Co.</span>
+                </a>
+            </div>
 
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-           
-            <li class="dropdown">
-                <a href="collection.html" class="dropbtn, active">Collections </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+
+                <li class="dropdown">
+                    <a href="collection.html" class="dropbtn active">Collections</a>
 
                     <ul class="dropdown-content">
-                        <li>
-                            <a href="ring.html">Rings</a>
-                        </li>
-                        <li>
-                            <a href="necklace.html">Necklaces</a>
-                        </li>
-                        <li>
-                            <a href="earring.html">Earrings</a>
-                        </li>
-                        <li>
-                            <a href="bracelet.html">Bracelets</a>
-                        </li>
-                        <li>
-                            <a href="vault.html">Vault Special</a>
-                        </li>
+                        <li><a href="ring.html">Rings</a></li>
+                        <li><a href="necklace.html">Necklaces</a></li>
+                        <li><a href="earring.html">Earrings</a></li>
+                        <li><a href="bracelet.html">Bracelets</a></li>
+                        <li><a href="vault.html" class="active">Vault Special</a></li>
                     </ul>
-            </li>
+                </li>
 
-            <li>
-                <a href="about.html">About Us</a>
-            </li>
-            <li>
-                <a href="contact.html">Contacts</a>
-            </li>
-        </ul>
-
-    </div>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contacts</a></li>
+            </ul>
+        </div>
     </nav>
 
-        <section class="product-section">
-    <h2 class="section-title">Our Vault's Special Collection</h2>
+    <!-- VAULT SECTION -->
+    <section class="vault-section">
 
-    <div class="product-container">
+        <h1 class="vault-title">Vault Special</h1>
+        <p class="vault-sub">Curated. Rare. Exclusive.</p>
 
-    <!-- PRODUCT -->
-        <div class="product-card">
-            <img src="images/imgEx.png" class="clickable"
-                data-name=""
-                data-material=""
-                data-price="₱"
-                data-desc="">
+        <div class="vault-grid">
 
-            <h3>Product 1</h3>
-            <p class="material">Material:  </p>
-            <p class="desc"></p>
-            <p class="price">₱</p>
-            <button class="buy-btn">Buy Now</button>
+            <!-- ITEM -->
+            <div class="vault-card clickable"
+                data-name="Product 1"
+                data-material="Silver, Amethyst"
+                data-price="₱2,499"
+                data-desc="A rare handcrafted piece with a luminous violet stone.">
+
+                <img src="images/imgEx.png" alt="Amethyst Relic">
+
+                <div class="vault-info">
+                    <p class="label">Collection I</p>
+                    <h3>PRODUCT 1</h3>
+                    <p class="price">₱2,499</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+            <!-- ITEM -->
+            <div class="vault-card clickable"
+                data-name="Product 2"
+                data-material="18K Gold Plated"
+                data-price="₱2,999"
+                data-desc="A luxurious gold piece preserved for exclusivity.">
+
+                <img src="images/imgEx.png" alt="Golden Archive">
+
+                <div class="vault-info">
+                    <p class="label">Collection II</p>
+                    <h3>PRODUCT 2</h3>
+                    <p class="price">₱2,999</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+            <!-- ITEM -->
+            <div class="vault-card clickable"
+                data-name="Product 3"
+                data-material="Crystal, Stainless Steel"
+                data-price="₱1,999"
+                data-desc="A brilliant crystal piece with refined elegance.">
+
+                <img src="images/imgEx.png" alt="Crystal Vault">
+
+                <div class="vault-info">
+                    <p class="label">Collection III</p>
+                    <h3>PRODUCT 3</h3>
+                    <p class="price">₱1,999</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
         </div>
+    </section>
 
-        <div class="product-card">
-            <img src="images/imgEx.png" class="clickable"
-                data-name=""
-                data-material=""
-                data-price="₱"
-                data-desc="">
+    <!-- MODAL -->
+    <div id="productModal" class="modal">
+        <div class="modal-box">
+            <span class="close">&times;</span>
 
-            <h3>Product 2</h3>
-            <p class="material">Material:  </p>
-            <p class="desc"></p>
-            <p class="price">₱</p>
-            <button class="buy-btn">Buy Now</button>
+            <img id="modalImg">
+            <h2 id="modalName"></h2>
+            <p id="modalMaterial"></p>
+            <p id="modalDesc"></p>
+            <p id="modalPrice" class="price"></p>
+
+            <button class="buy-btn">Reserve Now</button>
         </div>
-
-        <div class="product-card">
-            <img src="images/imgEx.png" class="clickable"
-                data-name=""
-                data-material=""
-                data-price="₱"
-                data-desc="">
-
-            <h3>Product 3</h3>
-            <p class="material">Material:  </p>
-            <p class="desc"></p>
-            <p class="price">₱</p>
-            <button class="buy-btn">Buy Now</button>
-        </div>
-
-        <div class="product-card">
-            <img src="images/imgEx.png" class="clickable"
-                data-name=""
-                data-material=""
-                data-price="₱"
-                data-desc="">
-
-            <h3>Product 4</h3>
-            <p class="material">Material:  </p>
-            <p class="desc"></p>
-            <p class="price">₱</p>
-            <button class="buy-btn">Buy Now</button>
-        </div>
-
-        <div class="product-card">
-            <img src="images/imgEx.png" class="clickable"
-                data-name=""
-                data-material=""
-                data-price="₱"
-                data-desc="">
-
-            <h3>Product 5</h3>
-            <p class="material">Material:  </p>
-            <p class="desc"></p>
-            <p class="price">₱</p>
-            <button class="buy-btn">Buy Now</button>
-        </div>
-
-        <div class="product-card">
-            <img src="images/imgEx.png" class="clickable"
-                data-name=""
-                data-material=""
-                data-price="₱"
-                data-desc="">
-
-            <h3>Product 6</h3>
-            <p class="material">Material:  </p>
-            <p class="desc"></p>
-            <p class="price">₱</p>
-            <button class="buy-btn">Buy Now</button>
-        </div>
-
     </div>
-</section>
 
-<!-- MODAL -->
-<div id="productModal" class="modal">
-    <div class="modal-box">
-        <span class="close">&times;</span>
+    <!-- SCRIPT -->
+    <script>
+    const modal = document.getElementById("productModal");
+    const modalImg = document.getElementById("modalImg");
+    const modalName = document.getElementById("modalName");
+    const modalMaterial = document.getElementById("modalMaterial");
+    const modalDesc = document.getElementById("modalDesc");
+    const modalPrice = document.getElementById("modalPrice");
 
-        <img id="modalImg">
-        <h2 id="modalName"></h2>
-        <p id="modalMaterial"></p>
-        <p id="modalDesc"></p>
-        <p id="modalPrice" class="price"></p>
+    /* OPEN MODAL */
+    document.querySelectorAll(".vault-card").forEach(card => {
+        card.addEventListener("click", function () {
+            modal.classList.add("show");
 
-        <button class="buy-btn">Buy Now</button>
-    </div>
-</div>
-
-<script>
-const modal = document.getElementById("productModal");
-const modalImg = document.getElementById("modalImg");
-const modalName = document.getElementById("modalName");
-const modalMaterial = document.getElementById("modalMaterial");
-const modalDesc = document.getElementById("modalDesc");
-const modalPrice = document.getElementById("modalPrice");
-
-document.querySelectorAll(".clickable").forEach(img => {
-    img.addEventListener("click", function() {
-        modal.classList.add("show");
-
-        modalImg.src = this.src;
-        modalName.textContent = this.dataset.name;
-        modalMaterial.textContent = "Material: " + this.dataset.material;
-        modalDesc.textContent = this.dataset.desc;
-        modalPrice.textContent = this.dataset.price;
+            modalImg.src = this.querySelector("img").src;
+            modalName.textContent = this.dataset.name;
+            modalMaterial.textContent = "Material: " + this.dataset.material;
+            modalDesc.textContent = this.dataset.desc;
+            modalPrice.textContent = this.dataset.price;
+        });
     });
-});
 
-document.querySelector(".close").onclick = () => {
-    modal.classList.remove("show");
-};
+    /* CLOSE MODAL */
+    document.querySelector(".close").onclick = () => {
+        modal.classList.remove("show");
+    };
 
-modal.addEventListener("click", (e) => {
-    if (e.target === modal) modal.classList.remove("show");
-});
-
-document.querySelectorAll(".buy-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-        alert("🛒 Purchase feature coming soon!");
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) modal.classList.remove("show");
     });
-});
-</script>
+
+    /* BUY BUTTON */
+    document.querySelectorAll(".buy-btn").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            alert("🛒 Purchase feature coming soon!");
+        });
+    });
+    </script>
 
     <footer class="collection-foot">
         &copy; 2026 Violet Quartz Co.
     </footer>
-
 </body>
 </html>
